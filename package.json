@@ -9,12 +9,15 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "husky": "^8.0.3"
+  },
   "dependencies": {
-    "@strapi/strapi": "4.11.3",
-    "@strapi/plugin-users-permissions": "4.11.3",
     "@strapi/plugin-i18n": "4.11.3",
-    "better-sqlite3": "8.0.1"
+    "@strapi/plugin-users-permissions": "4.11.3",
+    "@strapi/strapi": "4.11.3",
+    "better-sqlite3": "8.0.1",
+    "strapi-plugin-config-sync": "^1.1.2"
   },
   "author": {
     "name": "A Strapi developer"
