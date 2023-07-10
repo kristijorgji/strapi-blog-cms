@@ -4,6 +4,53 @@
   "description": "Authors can manage the content they have created.",
   "permissions": [
     {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::post.post",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::post.post",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::post.post",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::post.post",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
       "action": "plugin::upload.assets.copy-link",
       "subject": null,
       "properties": {},

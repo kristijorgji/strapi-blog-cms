@@ -20,21 +20,6 @@
           "sortable": true
         }
       },
-      "author": {
-        "edit": {
-          "label": "author",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "username"
-        },
-        "list": {
-          "label": "author",
-          "searchable": true,
-          "sortable": true
-        }
-      },
       "title": {
         "edit": {
           "label": "title",
@@ -95,16 +80,12 @@
     "layouts": {
       "list": [
         "id",
-        "author",
         "title",
-        "createdAt"
+        "createdAt",
+        "updatedAt"
       ],
       "edit": [
         [
-          {
-            "name": "author",
-            "size": 6
-          },
           {
             "name": "title",
             "size": 6

@@ -11,11 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "author": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
-    },
     "title": {
       "type": "string",
       "required": true

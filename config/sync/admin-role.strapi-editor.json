@@ -4,6 +4,51 @@
   "description": "Editors can manage and publish contents including those of other users.",
   "permissions": [
     {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::post.post",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::post.post",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::post.post",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::post.post",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::post.post",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
       "action": "plugin::upload.assets.copy-link",
       "subject": null,
       "properties": {},
