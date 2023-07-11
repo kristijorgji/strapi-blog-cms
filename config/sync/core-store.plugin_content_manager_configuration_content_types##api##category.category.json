@@ -1,7 +1,7 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::post.post",
+  "key": "plugin_content_manager_configuration_content_types::api::category.category",
   "value": {
-    "uid": "api::post.post",
+    "uid": "api::category.category",
     "settings": {
       "bulkable": true,
       "filterable": true,
@@ -34,20 +34,6 @@
           "sortable": true
         }
       },
-      "content": {
-        "edit": {
-          "label": "content",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "content",
-          "searchable": false,
-          "sortable": false
-        }
-      },
       "slug": {
         "edit": {
           "label": "slug",
@@ -76,9 +62,9 @@
           "sortable": false
         }
       },
-      "categories": {
+      "parent": {
         "edit": {
-          "label": "categories",
+          "label": "parent",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -86,38 +72,9 @@
           "mainField": "title"
         },
         "list": {
-          "label": "categories",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "tags": {
-        "edit": {
-          "label": "tags",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "name"
-        },
-        "list": {
-          "label": "tags",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "featuredImage": {
-        "edit": {
-          "label": "featuredImage",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "featuredImage",
-          "searchable": false,
-          "sortable": false
+          "label": "parent",
+          "searchable": true,
+          "sortable": true
         }
       },
       "createdAt": {
@@ -153,6 +110,12 @@
       "edit": [
         [
           {
+            "name": "parent",
+            "size": 6
+          }
+        ],
+        [
+          {
             "name": "title",
             "size": 6
           }
@@ -165,30 +128,8 @@
         ],
         [
           {
-            "name": "content",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "featuredImage",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "seo",
             "size": 12
-          }
-        ],
-        [
-          {
-            "name": "categories",
-            "size": 6
-          },
-          {
-            "name": "tags",
-            "size": 6
           }
         ]
       ],
