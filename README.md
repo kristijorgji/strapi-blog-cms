@@ -11,7 +11,9 @@ It includes
 
 Clone this repository then run `yarn install`
 
-Afterward run
+Copy .env.example to .env and fill in proper values
+
+Afterward run `yarn build` and finally
 ```bash
 config-sync import
 ```
@@ -35,6 +37,24 @@ npm run develop
 # or
 yarn develop
 ```
+
+#### Seeding test data
+
+Adjust `src/index.ts` `bootstrap` method and uncomment the call to `seedTestData`
+
+This will create an admin user and some data for you only for development purpose.
+
+Test credentials:
+
+`admin@email.com`
+
+`admin`
+
+#### Debugging
+
+adjust `tsconfig.json` to have `"sourceMap": true`
+
+Adjust your editor, for example IntelliJ to run `yarn develop` command in debug mode and set-up breakpoints.
 
 ### `start`
 

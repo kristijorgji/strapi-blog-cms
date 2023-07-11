@@ -1,3 +1,5 @@
+import {seedTestData} from "./dev/seed-test-data";
+
 export default {
   /**
    * An asynchronous register function that runs before
@@ -14,5 +16,7 @@ export default {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/*{ strapi }*/) {},
+  async bootstrap(/*{ strapi }*/) {
+    // await seedTestData(strapi);
+  },
 };

@@ -10,6 +10,7 @@
     "strapi": "strapi"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
     "husky": "^8.0.3"
   },
   "dependencies": {
