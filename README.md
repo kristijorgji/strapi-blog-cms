@@ -28,17 +28,7 @@ It is using the default storage which is sqlite.
 Copy `.tmp` folder to a backup folder then when you initialise the project elsewhere just replace the folder.
 All your users, content will be preserved this way.
 
-### `develop`
-
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
-
-```
-npm run develop
-# or
-yarn develop
-```
-
-#### Seeding test data
+# Seeding test data
 
 Adjust `src/index.ts` `bootstrap` method and uncomment the call to `seedTestData`
 
@@ -50,32 +40,53 @@ Test credentials:
 
 `admin`
 
-#### Debugging
+# Migrating Wordpress data
+
+You can use `dev/migarte-from-wordpress.ts` file.
+
+First make sure to specify in the .env file the following variables
+```
+WP_MYSQL_HOST=some-value
+WP_MYSQL_USER=some-value
+WP_MYSQL_PASSWORD=some-value
+WP_MYSQL_DB=some-value
+```
+
+Then execute the exported function 1 time from the bootstrap or anywhere else.
+
+The tool will fetch posts, categories, tags and insert them into correct Strapi auto-generated content types.
+
+Please note that this will not migrate the custom pages and any plugins you have.
+
+TODO
+* migrate wp pages
+* migrate authors
+* consider plugins (feel free to make PRs here as well to improve)
+
+# Development
+
+Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+
+```
+npm run develop
+# or
+yarn develop
+```
+
+**Debugging**
 
 adjust `tsconfig.json` to have `"sourceMap": true`
 
 Adjust your editor, for example IntelliJ to run `yarn develop` command in debug mode and set-up breakpoints.
 
-### `start`
+# Start Strapi server
 
 Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+
+after building with `yarn build`
 
 ```
 npm run start
 # or
 yarn start
 ```
-
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).

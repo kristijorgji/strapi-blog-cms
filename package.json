@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
+    "@types/node": "^20.4.2",
     "husky": "^8.0.3"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
     "@strapi/plugin-users-permissions": "4.11.3",
     "@strapi/strapi": "4.11.3",
     "better-sqlite3": "8.0.1",
+    "mysql2": "^3.5.2",
     "strapi-plugin-config-sync": "^1.1.2"
   },
   "author": {
