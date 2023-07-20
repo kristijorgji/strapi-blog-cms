@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "f014f561-84dd-4b59-b8ef-a1899e41db70",
+		"name": "Strapi Blog Cms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19803572"
+	},
+	"item": [
+		{
+			"name": "get posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{strapiCmsBasePath}}/api/posts?populate=categories,tags,seo&pagination[page]=1&sort[0]=createdAt:desc",
+					"host": [
+						"{{strapiCmsBasePath}}"
+					],
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "populate",
+							"value": "categories,tags,seo"
+						},
+						{
+							"key": "pagination[page]",
+							"value": "1"
+						},
+						{
+							"key": "sort[0]",
+							"value": "createdAt:desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get posts slugs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{strapiCmsBasePath}}/api/posts?fields[0]=slug&pagination[page]=1",
+					"host": [
+						"{{strapiCmsBasePath}}"
+					],
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "fields[0]",
+							"value": "slug"
+						},
+						{
+							"key": "pagination[page]",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{strapiCmsBasePath}}/api/posts?filters[slug]=my-first-post&populate=categories,tags,seo",
+					"host": [
+						"{{strapiCmsBasePath}}"
+					],
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "filters[slug]",
+							"value": "my-first-post"
+						},
+						{
+							"key": "populate",
+							"value": "categories,tags,seo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get tags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{strapiCmsBasePath}}/api/tags",
+					"host": [
+						"{{strapiCmsBasePath}}"
+					],
+					"path": [
+						"api",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{strapiCmsBasePath}}/api/categories?populate=parent",
+					"host": [
+						"{{strapiCmsBasePath}}"
+					],
+					"path": [
+						"api",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "populate",
+							"value": "parent"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{bearerToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "strapiCmsBasePath",
+			"value": "http://localhost:1337",
+			"type": "string"
+		},
+		{
+			"key": "bearerToken",
+			"value": "insertyourowntoken",
+			"type": "string"
+		}
+	]
+}
